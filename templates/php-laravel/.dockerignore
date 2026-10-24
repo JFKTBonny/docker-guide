@@ -1,0 +1,13 @@
+vendor
+node_modules
+.env
+.git
+.gitignore
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+bootstrap/cache/*
+Dockerfile
+.dockerignore
+README.md

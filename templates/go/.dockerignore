@@ -1,0 +1,9 @@
+.git
+.gitignore
+.env
+*.test
+*.out
+vendor
+Dockerfile
+.dockerignore
+README.md

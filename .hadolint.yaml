@@ -1,0 +1,13 @@
+# Hadolint configuration
+# https://github.com/hadolint/hadolint#configure
+
+ignored:
+  # Pinning exact OS package versions (apt/apk) breaks builds whenever the
+  # distro publishes a security update. These templates pin the base image instead.
+  - DL3008
+  - DL3018
+
+trustedRegistries:
+  - docker.io
+  - gcr.io
+  - mcr.microsoft.com

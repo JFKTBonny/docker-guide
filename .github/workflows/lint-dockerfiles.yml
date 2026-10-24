@@ -1,0 +1,21 @@
+name: Lint Dockerfiles
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  hadolint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Hadolint on all Dockerfiles
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: "Dockerfile"
+          recursive: true
+          config: .hadolint.yaml
+          failure-threshold: warning
